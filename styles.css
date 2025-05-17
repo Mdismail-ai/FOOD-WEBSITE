@@ -1,0 +1,4 @@
+
+:root { --primary: #0a192f; --secondary: #112240; --accent: #64ffda; --dark: #ffffff; --light: #e6f1ff; }
+body { background: var(--light); color: var(--primary); overflow-x: hidden; line-height: 1.6; }
+/* Full original CSS from user */
