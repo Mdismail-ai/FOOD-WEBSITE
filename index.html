@@ -1,14 +1,94 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Ismail | Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>OrangeBite - Food Delivery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- User's original content goes here -->
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">Orange<span>Bite</span></div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Delicious <span>Food</span> Delivered Fast</h1>
+                <p>Order your favorite meals from the best restaurants in town</p>
+                <a href="#menu" class="btn">Order Now</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Delicious food">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our <span>Menu</span></h2>
+                <p>Choose from our delicious selection</p>
+            </div>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="all">All</button>
+                <button class="tab-btn" data-category="pizza">Pizza</button>
+                <button class="tab-btn" data-category="burger">Burgers</button>
+                <button class="tab-btn" data-category="pasta">Pasta</button>
+                <button class="tab-btn" data-category="salad">Salads</button>
+            </div>
+            <div class="menu-grid" id="menuGrid">
+                <!-- Food items will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="overlay" id="overlay"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here by JavaScript -->
+        </div>
+        <div class="cart-total">
+            <div class="total-row">
+                <span>Subtotal:</span>
+                <span id="subtotal">$0.00</span>
+            </div>
+            <div class="total-row">
+                <span>Delivery Fee:</span>
+                <span>$2.99</span>
+            </div>
+            <div class="total-row grand-total">
+                <span>Total:</span>
+                <span id="total">$2.99</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="js/script.js"></script>
 </html>
